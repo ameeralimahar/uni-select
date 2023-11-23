@@ -18,7 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { AccountCircleOutlined, AssuredWorkload, Logout, QuestionAnswer, School } from '@mui/icons-material';
+import { AccountCircleOutlined, AssuredWorkload, Logout, PublishedWithChanges, QuestionAnswer, School } from '@mui/icons-material';
 import { Card, CardContent, CardMedia } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -131,11 +131,11 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Profile', 'Open Admission', 'Scholarships', 'FAQS',"Log Out"].map((text, index) => (
+          {['Profile',"Applied Status", 'Open Admission', 'Scholarships', 'FAQS',"Log Out"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
             
                 {
-                    index === 4 ? (
+                    index === 5 ? (
                         <Link to={"/logout"}>
                         <ListItemButton 
                         sx={{
@@ -152,10 +152,11 @@ export default function Home() {
                             }}
                             >
                         {index === 0 && <AccountCircleOutlined/> } 
-                        {index === 1 && <AssuredWorkload/> } 
-                        {index === 2 && <School/> } 
-                        {index === 3 && <QuestionAnswer/> } 
-                        {index === 4 && <Logout/> }   
+                        {index === 1 && <PublishedWithChanges/> } 
+                        {index === 2 && <AssuredWorkload/> } 
+                        {index === 3 && <School/> } 
+                        {index === 4 && <QuestionAnswer/> } 
+                        {index === 5 && <Logout/> }   
                         </ListItemIcon>
                         <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                         
@@ -178,10 +179,11 @@ export default function Home() {
                     }}
                     >
                 {index === 0 && <AccountCircleOutlined/> } 
-                {index === 1 && <AssuredWorkload/> } 
-                {index === 2 && <School/> } 
-                {index === 3 && <QuestionAnswer/> } 
-                {index === 4 && <Logout/> }   
+                {index === 1 && <PublishedWithChanges/> } 
+                {index === 2 && <AssuredWorkload/> } 
+                {index === 3 && <School/> }
+                {index === 4 && <QuestionAnswer/> } 
+                {index === 5 && <Logout/> }   
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                  
